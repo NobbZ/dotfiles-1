@@ -11,20 +11,15 @@
     { nixpkgs, home-manager, nur, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config = { allowUnfree = true; };
-        overlays = [
-          nur.overlay
-        ];
-      };
     in
     {
       nixosConfigurations = {
         nixos-desktop = nixpkgs.lib.nixosSystem {
-          inherit pkgs system;
+          inherit system;
           modules = [
             ./hosts/nixos-desktop # import hardware config and system wide configs
+            { nixpkgs.overlays = [ nur.overlay ]; }
+            { nixpkgs.config.allowUnfree = true; }
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
