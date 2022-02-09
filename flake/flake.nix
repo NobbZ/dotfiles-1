@@ -29,7 +29,11 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.kirin = import ./modules/packages.nix; # import user level config for packages
+              home-manager.users.kirin.imports = [
+                ./modules/packages.nix # import user level config for packages
+                ./modules/alacritty
+                ./modules/firefox
+              ];
             }
           ];
         };
