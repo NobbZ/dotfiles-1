@@ -36,9 +36,9 @@
         neofetch
 
         # Gaming
-        vulkan-extension-layer
-        vulkan-headers
-        vulkan-tools
+        # vulkan-extension-layer
+        # vulkan-headers
+        # vulkan-tools
         steam
         wine
         lutris
