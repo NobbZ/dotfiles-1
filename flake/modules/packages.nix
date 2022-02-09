@@ -29,7 +29,6 @@
 
         # Code editors
         vscodium
-        neovim
 
         # Terminal Candy
         lsd
@@ -58,9 +57,6 @@
         
         # Virtualisation
         virt-manager
-
-        # Browser
-        firefox
         
         # Security
         opensnitch 
