@@ -3,7 +3,7 @@
     programs.home-manager.enable = true;
     home.username = "kirin";
     home.homeDirectory = "/home/kirin";
-    home.stateVersion = "21.11";
+    home.stateVersion = "22.05";
     home.packages = with pkgs; [
        # Terminal Utilities
         wget
@@ -29,7 +29,7 @@
 
         # Code editors
         vscodium
-        neovim
+        # neovim
 
         # Terminal Candy
         lsd
@@ -37,9 +37,9 @@
         neofetch
 
         # Gaming
-        vulkan-extension-layer
-        vulkan-headers
-        vulkan-tools
+        #vulkan-extension-layer
+        #vulkan-headers
+        #vulkan-tools
         steam
         wine
         lutris

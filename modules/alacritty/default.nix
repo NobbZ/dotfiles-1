@@ -1,9 +1,11 @@
-{ config, pkgs, lib, colorscheme, ... }:
-let
-  config = { colors }:
-    {
+{
+  home-manager.users.kirin.programs.alacritty = {
+    enable = true;
+
+    settings = {
+
       env = {
-        "TERM" = "xterm-256color";
+      "TERM" = "xterm-256color";
       };
 
       background_opacity = 0.9;
@@ -12,11 +14,11 @@ let
         padding = { x = 10; y = 10; };
         dynamic_padding = false;
         dynamic_title = true;
+        decorations = "none";
       };
 
       font = {
         size = 12;
-
         normal.family = "Hack Nerd Font Mono";
         normal.style = "Regular";
         bold.family = "Hack Nerd Font Mono";
@@ -43,9 +45,5 @@ let
         { key = "Right"; mods = "Alt"; chars = "\x1bf"; }
       ];
     };
-in
-{
-  programs.alacritty = {
-    enable = true;
   };
 }

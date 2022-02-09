@@ -2,9 +2,6 @@
     # import system wide configs here
   imports = [
     ./hardware-configuration.nix
-    ../../modules/packages.nix
-    ../../modules/firefox
-    ../../modules/alacritty
   ];
 
   users = {
@@ -40,7 +37,7 @@
   services.openssh.permitRootLogin = "no";
   services.openssh.passwordAuthentication = false;
 
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub = {
 	enable = true;
@@ -97,5 +94,5 @@
       experimental-features = nix-command flakes
     '';
   };
-  system.stateVersion = "21.11";
+  system.stateVersion = "22.05";
 }
